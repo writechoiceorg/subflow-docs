@@ -109,7 +109,8 @@ Best for: complex processes where context and explanation matter as much as the 
 Best for: quick, action-focused procedures where the action is more important than the explanation.
 
 - Use numbered lists for all procedures.
-- Begin each step with a bold imperative verb: `1. **Create** your template`
+- Begin each step with a plain imperative verb — do not bold it: `1. Click **Save** to apply your changes.`
+- Bold only the UI element name that follows the verb, not the verb itself. Example: `Click **Save**`, not `**Click** **Save**` and not `**Click Save**`.
 - Add optional sub-steps, code snippets, or expected results indented below the step.
 - Include at least one sentence of context before presenting a list of steps whenever possible.
 

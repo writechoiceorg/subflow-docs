@@ -14,6 +14,8 @@ Use the Writer skill when:
 
 Do **not** use this skill to review or assess existing documentation — use the Reviewer skill for that.
 
+This skill is scoped exclusively to Featurebase. Pages produced by this skill must not include frontmatter.
+
 ---
 
 ## Collect context
@@ -34,7 +36,6 @@ Before loading references or writing anything, identify the source material and 
 
 - **Source material** — which file(s) or content are you drawing from?
 - **Product / feature name** — what is being documented?
-- **Documentation framework** — which platform is this project using (e.g. Mintlify, Fumadocs, Gitbook)? Is an MCP for that platform available?
 - **Page type** — if already known; otherwise identify it after loading references
 - **New or expansion** — is this a new page or an expansion of an existing one?
 
@@ -64,7 +65,7 @@ Provides the structure template for each page type: concept, how-to guide, refer
 ### Platform components & formatting
 → See [`references/ProjectConvention.md`](references/ProjectConvention.md)
 
-Provides MDX/frontmatter syntax, structural rules, and callout types for the project. When a platform MCP is connected, prefer the MCP — it reflects the current state of the component library. Use `ProjectConvention.md` as fallback or to resolve conflicts.
+Provides Featurebase structural rules, callout types, and component usage for the project.
 
 ### Information architecture
 → See [`references/information-architecture.md`](references/information-architecture.md)
@@ -80,7 +81,7 @@ Use after writing each page to confirm output quality before closing the task.
 
 1. Terminology (`glossary.md`) — establishes the vocabulary you must use throughout
 2. Style guide (`style-guide.md`) — establishes tone and writing rules
-3. Platform components (MCP or `ProjectConvention.md`) — establishes what you can build with
+3. Platform components (`ProjectConvention.md`) — establishes what you can build with
 4. Page types (`page-types.md`) — load only the relevant type
 5. IA structure (`information-architecture.md`) — establishes where the output lives
 
@@ -122,8 +123,9 @@ With context confirmed, references loaded, and scope filtered, write the page.
 1. Open `references/page-types.md` and load the structure for the identified page type. Load only the relevant type — do not load all four.
 2. Open `references/style-guide.md` and apply all default rules plus any project-specific overrides.
 3. Write the full page following the loaded structure. Do not skip sections — if a section cannot be written due to missing information, raise a flag at that point and continue with the rest.
-4. Apply frontmatter as defined in `references/ProjectConvention.md`. Do not omit required fields.
-5. Raise flags inline as you encounter them — do not batch them at the end.
+4. **For how-to guides and tutorials, build the full "Before you begin" section after drafting the steps.** This section consolidates everything the user needs before starting — access, tools, prior knowledge, and the content or decisions they must bring with them. The last category must be inferred from the steps and is the one most easily missed. See "Inferred preparation items" in `references/page-types.md` for the derivation procedure. The section is only omitted if the procedure genuinely requires nothing — this is rare. Do not split into separate "Prerequisites" and "Before you begin" sections.
+5. Do not add frontmatter to the page. Featurebase pages start directly with the page title as a top-level heading.
+6. Raise flags inline as you encounter them — do not batch them at the end.
 
 Do not mark the page as done if it contains unresolved flags.
 

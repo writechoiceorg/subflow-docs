@@ -98,11 +98,20 @@ Short introduction: state what the user will accomplish and when or why
 they would do it. Keep it brief — do not teach theory here.
 Do not bold any words in this introduction.
 
-## Prerequisites
+## Before you begin
 
-- Tools or software required (with links if necessary).
-- Prior knowledge or previous setup steps (with links to the relevant guides).
-- Be specific and assertive. Avoid vague phrases like "a good knowledge of the tools."
+List everything the user needs before starting the steps. This is one consolidated section — do not split it into separate "Prerequisites" and "Before you begin" sections.
+
+Include, in this order:
+- Account, access, or permissions required.
+- Tools, software, or prior setup (with links if necessary).
+- Prior knowledge or previous guides the user should have completed (with links to the relevant guides).
+- Content, values, or decisions the user must bring to the procedure (inferred from the steps — see "Inferred preparation items" below).
+
+Be specific and assertive. Avoid vague phrases like "a good knowledge of the tools."
+Include links to related pages where relevant.
+
+Only omit this section if the procedure genuinely requires nothing — no access, no setup, no prior knowledge, and no user-supplied input. This is rare.
 
 > [Insert callout for known limitations or caveats if needed.]
 
@@ -133,6 +142,27 @@ Use the CardList and Card components as defined in style-guide.md and ProjectCon
 If this guide is part of a larger workflow, describe the next required task
 and include a link.
 ```
+
+### Inferred preparation items
+
+Most of what goes in "Before you begin" can be read directly from the source material — required permissions, tools, prior setup. But there is a second category that is almost never stated explicitly: the **content, values, and decisions the user must bring with them** to complete the steps. These must be inferred from the procedure itself.
+
+Do not skip this inference. A "Before you begin" section that lists only access and tools, when the steps actually require the user to supply content or make choices, is incomplete.
+
+**How to derive the items:**
+
+1. Draft the full step sequence first, or at minimum outline every step, before finalizing the "Before you begin" section.
+2. For each step, ask: "What input, content, or decision does this step require the user to bring, that is not produced by an earlier step?" Examples:
+   - A step says "enter the template body" → the user needs the text content, or a clear idea of what it should say.
+   - A step says "select the contact properties to insert" → the user needs to know which properties they want to use.
+   - A step says "apply tags" → the user needs the tags, or a tagging scheme.
+   - A step says "choose a workspace" → the user needs to know which workspace.
+3. Add each inferred item to the "Before you begin" list alongside the access and setup items.
+4. Write each item as a noun phrase describing the input, followed by the acceptable form. Allow for "or a clear idea of what it should be" when the input is creative content rather than a fixed value. Example: "The text you want the template to contain, or a clear idea of what it should say."
+
+**When to flag instead of inferring:**
+
+If a step requires user input but you cannot tell from the source what kind of input is valid (format constraints, allowed values), raise a flag rather than writing a vague item. Example: `> FLAG: Insufficient source — Step 3 asks the user to enter a "condition value" but the source does not state what values are accepted. Need clarification before listing this in "Before you begin".`
 
 ---
 
@@ -219,10 +249,13 @@ Do not bold any words in the introduction paragraph itself.
 
 ## Before you begin
 
-List what the user must know or have done before following this tutorial:
-- Knowledge and concepts required
-- Environment setup
-- Access, tokens, or permissions needed
+List everything the user needs before starting the tutorial — this is one consolidated section. Apply the same rules as for how-to guides, including inferring the content, values, and decisions the user must bring to the steps. See "Inferred preparation items" under the How-to guide section.
+
+Include, in this order:
+- Access, tokens, or permissions needed.
+- Environment setup, tools, or installed software.
+- Knowledge and concepts required (link to concept pages).
+- Content, values, or decisions the user must bring to the procedure.
 
 Include links to related pages where relevant.
 

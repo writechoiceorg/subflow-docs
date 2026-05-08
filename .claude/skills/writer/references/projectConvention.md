@@ -6,29 +6,7 @@
 
 ## Platform
 
-**Documentation framework:** [e.g. Mintlify / Fumadocs / Gitbook / Other]
-**Platform MCP available:** [Yes / No. If yes, name it.]
-**Base URL:** [e.g. https://docs.yourproject.com]
-
----
-
-## Frontmatter
-
-All pages must include the following frontmatter fields:
-
-```yaml
----
-# Required fields — fill in per project
-title: ""
-description: ""
-# Add further required fields below
----
-```
-
-**Optional fields:**
-<!-- List optional frontmatter fields and their accepted values -->
-
----
+**Documentation framework:** Featurebase
 
 ## Components
 
@@ -62,4 +40,6 @@ List the available components for this project. The Writer skill will only use c
 
 ## Notes
 
-<!-- Add any additional platform-specific rules or constraints here -->
+Since Featurebase you can disregard most ocmponents as it is not react based. 
+
+WHENEVER A COMPONENT IS USED ADD A NOTE TO FILE AND WE WILL MANUALLY CONFIgURE It ON THE FEATUREBASE PORTAL.

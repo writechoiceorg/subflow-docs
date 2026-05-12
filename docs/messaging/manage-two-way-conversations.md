@@ -40,8 +40,6 @@ Click any conversation in the list to open the full thread on the right. Within 
 
 The reply area at the bottom of the conversation lets you respond using free-form text or a saved template.
 
-> **FLAG:** The specific button labels in the reply toolbar ("Templates", "Personalize", "Attach", "Send SMS") and the reply field label are not confirmed in transcripts. Verify against the sandbox before publishing.
-
 1. Open **Messaging** from the main navigation, then select **Inbox** under the **Conversations** heading.
 2. Click the conversation you want to reply to. The full message thread opens on the right.
 3. In the reply field at the bottom, write your response. You can:

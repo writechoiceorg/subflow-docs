@@ -163,19 +163,31 @@ The top-level application is **Automation** (not Workflows). Under Automation, t
   - **Archive Workflow** (shown in red)
 - Footer: row selection count, total results, rows per page selector (default 20), pagination controls
 
-> ⚠️ **Unconfirmed:** No Enable/Disable option appears in the row Actions menu. How the Auto Run Enabled/Disabled state is toggled is unknown — verify with Audra.
-
 ### Workflow Builder (canvas)
 
+**Screenshot date:** 2026-05-14
+**Source:** Sandbox account — "Camp workflow testing" workflow open in Edit Workflow view
+
 - Page heading: **Create Workflow** (when creating new) | workflow name (when editing)
-- Canvas toolbar: zoom slider (−/+), zoom % display, fullscreen icon, auto-layout icon, tag icon, settings gear
+- Canvas toolbar: zoom slider (−/+), zoom % display, fullscreen icon, auto-layout icon, tag icon, **settings gear**
+- Top-right of builder header: **Trigger Run** button + three-dot menu; back arrow (←) to exit without saving
 - Canvas search bar: "**Search workflow actions...**" (searches for node types to add by name — unclear if this also adds nodes or is separate from connection-dot flow)
 - New workflows start with a single **Trigger** node on the canvas
 - **How to add a node:** Click the **connection dot** at the bottom of a node. The right panel changes to the **Action** picker ("Select an action type") with a "Search actions..." bar
 - Clicking a node opens its config panel in the right panel
 - **Apply Changes** button in the config panel confirms node settings (must click before Save)
 - Bottom toolbar: **Unsaved Changes** warning (orange) | **Reset** | **Save**
-- Back arrow (←) top-right to exit the builder without saving
+
+#### Workflow Settings panel (gear icon in canvas toolbar)
+
+Clicking the settings gear opens the **Workflow Settings** panel on the right side of the builder. Fields confirmed:
+
+- **Name:** editable text field (workflow name)
+- **Description:** editable text area
+- **Tags:** dropdown ("Select tags") — "Tags help you organize your workflows."
+- **Auto Run:** toggle (blue = on / off = grey) — helper text: "Allows the workflow to execute automatically based on trigger events"
+
+> ✅ **Confirmed (2026-05-14):** Auto Run is toggled via the Workflow Settings panel inside the Workflow Builder, not from the Active Workflows list row or the Actions menu.
 
 ### Node three-dot menu (on individual nodes in the canvas)
 
@@ -275,13 +287,40 @@ The Trigger Event dropdown has a "Search events..." search bar. Confirmed event 
 | Create Task | Assign Task |
 | Wait for Time | Wait Until |
 
+### Search Facets panel (filter panel)
+
+Opened by clicking the filter icon to the left of the search bar on the Active Workflows page. A panel slides in on the left with:
+- Header: **Search Facets** / subtitle: "Narrow your results using filters"
+- **Search field...** bar (search within filter fields)
+- **Fields** section with three expandable filter fields:
+  - **Auto Run** (filter by Enabled / Disabled)
+  - **Trigger** (filter by trigger event type)
+  - **Tags** (filter by workflow tags)
+
+The main search bar accepts keyword text (e.g. "admission") and the Search tab badge updates to show the result count.
+
+### Trigger Workflow Run dialog
+
+**Screenshot date:** 2026-05-14
+**Source:** Sandbox account — triggered from the Workflow Builder header (**Trigger Run** button, top-right)
+
+- Modal title: **Trigger Workflow Run**
+- Subtitle: "Select the contacts to manually trigger '[workflow name]' workflow."
+- **Event-based trigger warning** (orange banner): "This workflow is configured with an event-based trigger. Running it manually may cause failures if the workflow depends on event data that won't be available." Shown only when the workflow uses an event-based trigger type.
+- **Search contacts** bar (text input)
+- Contact list: each entry shows two-letter initials avatar, full name, phone number, and a **Select** button
+- Footer: "Selected 0/50 contacts" counter + **Clear all** link — maximum 50 contacts per manual run
+- **Trigger Run** button at the bottom of the dialog (launches the runs)
+
+> ✅ **Confirmed (2026-05-14):** Trigger Run opens a contact picker dialog. You select contacts from the list (up to 50), then click Trigger Run to start. No contact needs to be pre-selected elsewhere in the platform.
+
+---
+
 ### Still unconfirmed for Workflows (needs additional screenshots)
 
-- How Auto Run Enabled/Disabled is toggled
 - Paths node config panel (conditions, AND/OR, fallback path)
 - Wait Until config panel (delay format)
 - Wait For Event config panel (which events; timeout duration)
 - Assign Task config panel (fields)
-- Whether Trigger Run prompts for a specific contact
 - Whether more trigger event types exist below Care Plan in the dropdown
 - Whether archived workflows can be restored

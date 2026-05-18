@@ -21,9 +21,10 @@ When your account has many workflows, you can search by name or use the filter t
 
 1. On the **Active Workflows** page, type a workflow name or keyword into the search bar.
 2. Click **Search** to apply the search.
-3. To filter by trigger type, status, or other criteria, click the filter icon to the left of the search bar and set the conditions you want to apply.
-
-   [Note: Need confirmation on the available filter options in the filter panel.]
+3. To filter the list, click the filter icon to the left of the search bar. A **Search Facets** panel opens on the left. Expand any of the three filter fields to narrow results:
+   - **Auto Run:** filter by Enabled or Disabled status
+   - **Trigger:** filter by trigger event type
+   - **Tags:** filter by tags assigned to workflows
 
 To clear the search and return to the full list, remove the text from the search bar and click **Search** again.
 
@@ -43,19 +44,27 @@ Use the Edit Workflow option to open a workflow in the Workflow Builder and make
 
 The **Auto Run** setting controls whether a workflow runs automatically whenever its trigger event fires. Workflows with Auto Run set to **Enabled** start a new run for every contact that matches the trigger. Workflows set to **Disabled** do not start runs automatically, but can still be triggered manually.
 
-[Note: Need confirmation on how the Auto Run Enabled/Disabled state is toggled — whether it is a clickable toggle on the Active Workflows list, a setting inside the Workflow Builder, or an option in the three-dot Actions menu.]
+Auto Run is toggled from within the **Workflow Builder**.
+
+1. On the **Active Workflows** page, find the workflow you want to update.
+2. Click the three-dot **Actions** menu and click **Edit Workflow**. The **Workflow Builder** opens.
+3. Click the settings gear icon in the canvas toolbar. The **Workflow Settings** panel opens on the right.
+4. Click the **Auto Run** toggle to enable or disable it.
+5. Click **Save**. The Auto Run status on the **Active Workflows** list updates to reflect the change.
 
 ## Trigger a workflow manually
 
-Use the Trigger Run option when you want to start a workflow run for a specific contact without waiting for the trigger event to fire automatically. This is available for all workflows, including those with Auto Run set to **Disabled**.
+Use the Trigger Run option when you want to start a workflow run for one or more contacts without waiting for the trigger event to fire automatically. This is available for all workflows, including those with Auto Run set to **Disabled**.
 
 1. On the **Active Workflows** page, find the workflow you want to run.
 2. Click the three-dot **Actions** menu at the right end of the workflow's row.
-3. Click **Trigger Run**.
+3. Click **Trigger Run**. The **Trigger Workflow Run** dialog opens.
+4. Use the **Search contacts** bar or scroll the list to find the contacts you want to run the workflow for. Click **Select** next to each contact. You can select up to 50 contacts at a time.
+5. Click **Trigger Run** at the bottom of the dialog to start the run.
 
-   [Note: Need confirmation on whether Trigger Run prompts you to select a contact before starting the run, or whether it requires a contact to already be selected elsewhere in the platform.]
+> **Note:** If the workflow uses an event-based trigger, a warning appears in the dialog explaining that running it manually may cause failures if the workflow depends on event data that will not be available. Review the warning before proceeding.
 
-You can also schedule a run for a future time by clicking **Schedule Run** instead. Both options are available in the same Actions menu.
+You can also schedule a run for a future time by clicking **Schedule Run** in the same Actions menu.
 
 ## View run history
 

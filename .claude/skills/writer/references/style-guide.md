@@ -279,7 +279,7 @@ List any exceptions to the default bolding rules for this project.
 ### Heading convention
 
 - `[e.g. This project uses title case for all H2 headings.]`
-- `[e.g. Step headings must follow the format "Step N: Title".]`
+- The main procedure section in a how-to guide uses the heading `## Get started`, not `## Steps`.
 
 ### Additional rules
 

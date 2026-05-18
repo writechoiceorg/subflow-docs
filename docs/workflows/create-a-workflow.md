@@ -14,17 +14,19 @@ Before you start building, have the following ready:
 
 > **Note:** Some trigger event types, such as EHR-based events, require an active integration between Subflow and your organization's electronic health record system. That integration is set up by the Subflow technical team, not by clinical staff. If you are not sure which trigger event types are available in your account, contact your Subflow administrator.
 
-## Steps
+## Get started
 
 Follow the steps below to create a workflow.
 
 1. Open **Automation** from the main navigation sidebar.
 
-2. Under the **Workflows** heading in the sidebar, click **Active Workflows**.
+2. Access the **Workflow Builder** using either of these paths:
+   - Under **Workflows** in the sidebar, click **Active Workflows**, then select **Create Workflow** in the top-right corner.
+   - Under **Workflows** in the sidebar, click **Workflow Builder**.
 
-3. Click **Create Workflow** in the top-right corner. The **Workflow Builder** opens with a single **Trigger** node on the canvas.
+   The **Workflow Builder** opens with a single **Trigger** node on the canvas and the **Workflow Settings** panel on the right.
 
-   [Note: Need confirmation on whether a workflow name must be entered before the builder opens, or whether the workflow title at the top of the builder page can be edited after opening.]
+3. In the **Workflow Settings** panel, enter a name for your workflow in the **Name** field. Add a description and tags if needed.
 
 4. Click the **Trigger** node on the canvas. The configuration panel opens on the right.
 
@@ -34,7 +36,7 @@ Follow the steps below to create a workflow.
 
 7. Click the **connection dot** at the bottom of the **Trigger** node. The right panel changes to show the **Action** picker, with all available node types listed under **Flow Control** and **Actions**.
 
-8. In the **Action** picker, click the node type you want to add as the first step. The node appears on the canvas connected to the Trigger node, and its configuration panel opens on the right.
+8. In the **Action** picker, select the node type you want to add as the first step. The node appears on the canvas connected to the Trigger node, and its configuration panel opens on the right.
 
    Use the "Search actions..." bar at the top of the picker to find a node type by name if the list is long.
 
@@ -50,11 +52,21 @@ Follow the steps below to create a workflow.
 
 13. End each path in the workflow by connecting it to an **Exit Workflow** node. Every path in a completed workflow should have a clear end point.
 
-14. Click **Save** at the bottom of the canvas to save the workflow.
+14. Enable **Auto Run** in the **Workflow Settings** panel to start running the workflow automatically for new contacts. The toggle turns blue when enabled.
 
-15. To start running the workflow for new contacts, enable it.
+15. Click **Save** at the bottom of the canvas to save the workflow and apply your settings.
 
-    [Note: Need confirmation on how the Auto Run state is enabled or disabled — whether it is toggled on the Active Workflows list page or from within the Workflow Builder settings.]
+## Duplicate an existing workflow
+
+If the workflow you want to build is similar to one that already exists, you can duplicate it and modify the copy instead of building from scratch.
+
+1. Open **Automation** from the main navigation sidebar.
+2. Under **Workflows** in the sidebar, click **Active Workflows**.
+3. Find the workflow you want to copy. Click the three-dot **Actions** menu at the right end of its row.
+4. Click **Duplicate**. A copy of the workflow appears in the list named "Copy of [original name]".
+5. Click the **Actions** menu on the copy and click **Edit Workflow** to open it in the Workflow Builder.
+6. Make your changes to the nodes, trigger event, or settings.
+7. Click **Save**.
 
 ## Related articles
 
